@@ -10,7 +10,7 @@ RUN apt-get update &&\
 # php7.0-imap php7.0-curl php7.0-opcache
 
 RUN rm -rf /var/www/html && mkdir /var/www/html && cd /var/www/html &&\
-    git https://github.com/litecart/litecart.git .&&\
+    git clone https://github.com/litecart/litecart.git .&&\
     rm -rf themes/community-theme-default &&\
     chown -R www-data:www-data . &&\
     a2enmod rewrite &&\
