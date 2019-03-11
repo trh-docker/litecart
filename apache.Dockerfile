@@ -13,7 +13,7 @@ RUN rm -rf /var/www/html && mkdir /var/www/html && cd /var/www/html &&\
     git clone https://github.com/litecart/litecart.git .&&\
     rm -rf themes/community-theme-default &&\
     chown -R www-data:www-data . &&\
-    a2enmod rewrite &&\
+    a2enmod rewrite && a2enmod headers &&\
     apt-get autoclean && apt-get autoremove &&\
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
